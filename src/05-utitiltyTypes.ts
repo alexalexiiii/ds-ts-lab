@@ -55,4 +55,13 @@ function sortArray<T>(arr: T[], criterion: (a: T, b: T) => number): T[] {
 }
 
 
+console.log("Friends sorted by age:", sortArray(friends, (a, b) => a.age - b.age));
+
+
+console.log("Colleagues sorted by extension:", sortArray(colleagues.current, (a, b) => a.contact.extension - b.contact.extension));
+
+
+
+
+
 
