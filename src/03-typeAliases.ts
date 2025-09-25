@@ -61,13 +61,12 @@ function findBuddyContact(list: BuddyList, name: string): string | undefined {
     if (buddy.name === name) {
       if ("phone" in buddy) {
         return buddy.phone;
-      }
-      else {
+      } else {
         return buddy.contact.email;
       }
     }
-    return undefined;
   }
+  return undefined; 
 }
 
 function getBuddyListFriends(list: BuddyList): Friend[] {
