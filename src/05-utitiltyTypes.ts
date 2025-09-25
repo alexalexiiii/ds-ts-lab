@@ -29,5 +29,22 @@ function generateEventPass(colleague: Colleague): EventPass {
 
 console.log("Event pass:", generateEventPass(colleagues.current[0]));
 
+function intersection(
+    friends: Friend[],
+    colleagues: Colleague[]
+): Array<Friend & Colleague> {
+    return friends.reduce((res: Array<Friend & Colleague>, friend) => {
+        const colleague = colleagues.find(col => col.name === friend.name);
+        if (colleague) {
+            // Merge Friend & Colleague properties
+            res.push({ ...friend, ...colleague });
+        }
+        return res;
+    }, []);
+}
+
+
+console.log("Intersection:", intersection(friends, colleagues.current));
+
 
 
