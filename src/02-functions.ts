@@ -52,3 +52,24 @@ export function addInterest(f: Friend, interest: string): string[] {
     return f.interests;
 }
 
+// test invocations
+
+console.log(older(friends[0]));
+console.log(allOlder(friends));
+
+console.log(highestExtension(colleagues.current));
+
+addColleague(colleagues.current, "Sheild O Connell", "HR", "soc@here.com");
+console.log(colleagues.current.filter(c => c.name === "Sheild O Connell"));
+
+// sorting colleagues with max
+console.log(sortColleagues(colleagues.current, (a, b) => a.contact.extension - b.contact.extension, 3));
+console.log(sortColleagues(colleagues.current, (a, b) => a.name.length - b.name.length, 1));
+console.log(sortColleagues(colleagues.current, (a, b) => a.name.length - b.name.length)); // full array
+
+// find friends
+console.log(findFriends(friends, f => f.name.startsWith('Pa')));
+console.log(findFriends(friends, f => f.age < 35));
+
+// add interest
+console.log(addInterest(friends[0], 'Politics'));  // adds to existing or creates new interests array
