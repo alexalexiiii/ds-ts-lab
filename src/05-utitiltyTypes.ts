@@ -29,6 +29,8 @@ function generateEventPass(colleague: Colleague): EventPass {
 
 console.log("Event pass:", generateEventPass(colleagues.current[0]));
 
+
+// intersection function, combine both friend and colleague type in array
 function intersection(
     friends: Friend[],
     colleagues: Colleague[]
@@ -45,6 +47,12 @@ function intersection(
 
 
 console.log("Intersection:", intersection(friends, colleagues.current));
+
+// sort function used to sort over arry without mutating the original array
+function sortArray<T>(arr: T[], criterion: (a: T, b: T) => number): T[] {
+    const copy = [...arr];         
+    return copy.sort(criterion);
+}
 
 
 
