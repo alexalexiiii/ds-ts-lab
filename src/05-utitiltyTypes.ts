@@ -14,26 +14,24 @@ function generateEventPass(colleague: Colleague): EventPass {
   };
 }
 console.log(generateEventPass(colleagues.current[0]));
-
 function intersection(
   friends: Friend[],
   colleagues: Colleague[]
-): ?? {
-  let result: ?? = []
-  friends.reduce((res, friend) => {
+): Array<Friend & Colleague> {  // Intersection type
+  return friends.reduce((res: Array<Friend & Colleague>, friend) => {
     const colleague = colleagues.find((col) => col.name === friend.name);
     if (colleague) {
-      // Colleague is also a Friend
-      ??
+      res.push({ ...friend, ...colleague });
     }
     return res;
-  }, result);
-  return result;
+  }, []);
 }
+
+console.log(intersection(friends, colleagues.current));
 
 function sortFriend<>
 
-console.log(intersection(friends, colleagues.current));
+
 
 
 console.log(updateFriend(friends[0], {
