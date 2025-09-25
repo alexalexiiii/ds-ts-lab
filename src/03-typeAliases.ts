@@ -7,12 +7,10 @@ const colleague1: ColleagueV2 = {
   },
 };
 
-
-
 export type Department = "Engineering" | "Finance" | "HR";
 export interface ColleagueV2 {
   name: string;
-  department: Department;    // *****
+  department: Department;    
   contact: {
     email: string;
     extension: number;
@@ -41,7 +39,7 @@ function makeBuddyList(
   } as BuddyList;
   // The as operator above casts an object to a specific type.
 }
-// Tests for makeBuddyList
+// test for makeBuddyList
 const myFootballBuddies = makeBuddyList(
   "Football team",
   [colleague1, friends[0], colleague2],
@@ -51,12 +49,10 @@ const myFootballBuddies = makeBuddyList(
 const myBandBuddies = makeBuddyList(
     "Band name",
     [colleague1, friends[1]]
-    // No administrator
+
   )
 
-console.log(myFootballBuddies)
-console.log(myBandBuddies)
-//--------------------------------------
+
 function findBuddyContact(list: BuddyList, name: string): string | undefined {
   for (const buddy of list.members) {
     if (buddy.name === name) {
@@ -75,5 +71,8 @@ function getBuddyListFriends(list: BuddyList): Friend[] {
 }
 
 // adding test evocations here 
-console.log("Contact buddy at: ", findBuddyContact(myFootballBuddies, "Ralph Graham"));
-console.log("Friends in list: ", getBuddyListFriends(myFootballBuddies));
+// console.log("Contact buddy at: ", findBuddyContact(myFootballBuddies, "Ralph Graham"));
+// console.log("Friends in list: ", getBuddyListFriends(myFootballBuddies));
+
+// console.log(myFootballBuddies)
+// console.log(myBandBuddies)

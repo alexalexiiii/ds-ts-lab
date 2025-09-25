@@ -5,5 +5,6 @@ function findMatch<T>( data : T[], criteria: (d: T) => boolean ) : T | undefined
     return data.find((criteria))
 }
 
-console.log(findMatch<Friend>(friends, (f) => f.name.startsWith('Jane')  ))
-console.log(findMatch<Colleague>(colleagues.current, (c) => c.department === 'Finance'  ))
+// test evocations
+// console.log(findMatch<Friend>(friends, (f) => f.name.startsWith('Jane')  ))
+// console.log(findMatch<Colleague>(colleagues.current, (c) => c.department === 'Finance'  ))
