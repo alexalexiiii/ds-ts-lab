@@ -31,6 +31,8 @@ function intersection(
   return result;
 }
 
+function sortFriend<>
+
 console.log(intersection(friends, colleagues.current));
 
 

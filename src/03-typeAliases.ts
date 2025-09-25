@@ -28,7 +28,8 @@ export type BuddyList = {
   administrator: Administrator;
   members: Buddy[];
 };
-\function makeBuddyList(
+
+function makeBuddyList(
   name: string,
   buddies: Buddy[],
   admin?: Administrator
