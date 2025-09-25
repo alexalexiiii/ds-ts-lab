@@ -38,6 +38,19 @@ export function sortColleagues(
     return fullResult.slice(0, end);
 }
 
+// function to fin friends matching a criterion
+export function findFriends(fs: Friend[], predicate: (f: Friend) => boolean) {
+    return fs.filter(predicate).map(f => f.name);
+}
+
+// function to add an interest to a friend
+export function addInterest(f: Friend, interest: string): string[] {
+    if (!f.interests) {
+        f.interests = [];
+    }
+    f.interests.push(interest);
+    return f.interests;
+}
 
 // test invocations
 
