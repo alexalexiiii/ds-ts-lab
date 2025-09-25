@@ -70,16 +70,8 @@ function findBuddyContact(list: BuddyList, name: string): string | undefined {
 }
 
 function getBuddyListFriends(list: BuddyList): Friend[] {
-
-for (const buddy of list.members) {
-    if (buddy.name === list) {
-        if ("friend" in buddy){
-            return buddy.getBuddyListFriends
-        }
-        else {
-            return buddy;
-        }
-    }
+  return list.members.filter((buddy): buddy is Friend => "phone" in buddy);
 }
+
 // Test for findBuddyContact.
 console.log("Contact buddy at: ", findBuddyContact(myFootballBuddies, "Ralph Graham"));
