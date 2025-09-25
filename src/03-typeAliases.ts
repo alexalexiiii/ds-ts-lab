@@ -73,5 +73,6 @@ function getBuddyListFriends(list: BuddyList): Friend[] {
   return list.members.filter((buddy): buddy is Friend => "phone" in buddy);
 }
 
-// Test for findBuddyContact.
+// adding test evocations here 
 console.log("Contact buddy at: ", findBuddyContact(myFootballBuddies, "Ralph Graham"));
+console.log("Friends in list: ", getBuddyListFriends(myFootballBuddies));
