@@ -1,8 +1,9 @@
-
 export interface Friend {
     name: string;
     phone: string;
+    dob?: Date;            // Optional date of birth
     age: number;
+    interests?: string[];  // Optional interests array
 }
 
 export interface Colleague {
