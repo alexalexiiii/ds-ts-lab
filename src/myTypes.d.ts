@@ -6,7 +6,6 @@ export interface Friend {
     interests? : string[]   // New
 }
 
-
 export interface Colleague {
     name: string;
     department: string;
