@@ -38,7 +38,7 @@ function intersection(
     return friends.reduce((res: Array<Friend & Colleague>, friend) => {
         const colleague = colleagues.find(col => col.name === friend.name);
         if (colleague) {
-            // Merge Friend & Colleague properties
+            // merge Friend & Colleague properties
             res.push({ ...friend, ...colleague });
         }
         return res;
